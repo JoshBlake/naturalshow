@@ -1,0 +1,60 @@
+﻿<views:ShowView x:Class="NaturalShow.UI.Common.Views.ShowMapView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:views="clr-namespace:NaturalShow.UI.Common.Views"
+             xmlns:controls="clr-namespace:NaturalShow.UI.Common.Controls"
+             xmlns:ve="clr-namespace:InfoStrat.VE.WPFTouch;assembly=InfoStrat.VE.WPFTouch"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid VerticalAlignment="Bottom"
+              Margin="0,0,0,10">
+                    <ve:WPFTouchVEMap x:Name="map"
+                                      MapStyle="Hybrid"
+                                      LatLong="38.9444195081574,-77.0630161230201"
+                                      Altitude="15000000"
+                                      Width="210"
+                                      Height="210"
+                                      MapLoaded="map_MapLoaded">
+                        <ve:WPFTouchVEPushPin Latitude="38.9444195081574"
+                                              Longitude="-77.0630161230201"
+                                              Click="VEPushPin_Click">
+                            <StackPanel>
+                                <TextBlock Text="InfoStrat"
+                                           HorizontalAlignment="Center"
+                                           FontSize="20" />
+                            </StackPanel>
+                        </ve:WPFTouchVEPushPin>
+                        <ve:WPFTouchVEPushPin Latitude="36.0876989077001"
+                                              Longitude="-115.176246335637"
+                                              Click="VEPushPin_Click">
+                            <StackPanel>
+                                <TextBlock Text="MIX10"
+                                           HorizontalAlignment="Center"
+                                           FontSize="20" />
+                            </StackPanel>
+                        </ve:WPFTouchVEPushPin>
+                    </ve:WPFTouchVEMap>
+                </Grid>
+        <Border BorderBrush="White"
+                BorderThickness="10"
+                CornerRadius="10"
+                ClipToBounds="True">
+            <DockPanel>
+                <Border DockPanel.Dock="Top"
+                        Background="White"
+                        Margin="-1,-1,-1,10">
+                    <TextBlock Text="{Binding Text}" 
+                               Margin="5,5,5,0"
+                               FontSize="{Binding FontSize}"
+                               Style="{StaticResource StandardFont}"
+                               Foreground="{Binding Brush}"
+                               HorizontalAlignment="Center"/>
+                </Border>
+                <Grid />
+            </DockPanel>
+        </Border>
+    </Grid>
+</views:ShowView>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="NaturalShow.UI.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Path" Type="System.String" Scope="User">
+      <Value Profile="(Default)">D:\projects\NaturalShow\ShowResources\</Value>
+    </Setting>
+    <Setting Name="ShowFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">hdc10.xml</Value>
+    </Setting>
+    <Setting Name="ShowFileTemp" Type="System.String" Scope="User">
+      <Value Profile="(Default)">hdc10.temp.xml</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
